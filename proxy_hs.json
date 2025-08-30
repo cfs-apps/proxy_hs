@@ -18,7 +18,7 @@
       "update-files": [
          "hs.json                    >> hs.json",
          "CMakeLists.txt             >> CMakeLists.txt",
-         "eds/hs.xml                 >> eds/hs.xml",
+         "eds/HS.xml                 >> eds/HS.xml",
          "eds/hs_config.xml          >> eds/hs_config.xml",
          "fsw/inc/hs_fcncodes.h      >> fsw/inc/hs_fcncodes.h",
          "fsw/inc/hs_interface_cfg.h >> fsw/inc/hs_interface_cfg.h",
