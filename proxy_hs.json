@@ -1,0 +1,46 @@
+{ "app": {
+   
+   "title": "Health & Safety App",
+   "version": "1.0.0",
+   "supplier": "Open STEMware",
+   "copyright": "bitValence",
+   "url": "https://github.com/cfs-apps/proxy_hs",
+
+   "description": [
+      "This is Basecamp proxy for NASA's Health & Safety App. This repo augments",
+      "the HS App repo so HS can be integrated with Basecamp. The 'cfs' and",
+      "'requires' JSON objects are populated in hs.json"
+   ],
+
+   "proxy": {
+      "url": "https://github.com/nasa/hs",
+      "branch-tag": "equuleus-rc1",
+      "update-files": [
+         "hs.json                    >> hs.json",
+         "CMakeLists.txt             >> CMakeLists.txt",
+         "eds/hs.xml                 >> eds/hs.xml",
+         "eds/hs_config.xml          >> eds/hs_config.xml",
+         "fsw/inc/hs_fcncodes.h      >> fsw/inc/hs_fcncodes.h",
+         "fsw/inc/hs_interface_cfg.h >> fsw/inc/hs_interface_cfg.h",
+         "fsw/inc/hs_internal_cfg.h  >> fsw/inc/hs_internal_cfg.h",
+         "fsw/inc/hs_mission_cfg.h   >> fsw/inc/hs_mission_cfg.h",
+         "fsw/inc/hs_msg.h           >> fsw/inc/hs_msg.h",
+         "fsw/inc/hs_msgdefs.h       >> fsw/inc/hs_msgdefs.h",
+         "fsw/inc/hs_msgids.h        >> fsw/inc/hs_msgids.h",
+         "fsw/inc/hs_msgstruct.h     >> fsw/inc/hs_msgstruct.h",
+         "fsw/inc/hs_platform_cfg.h  >> fsw/inc/hs_platform_cfg.h",
+         "fsw/inc/hs_tbl.h           >> fsw/inc/hs_tbl.h",
+         "fsw/inc/hs_tbldefs.h       >> fsw/inc/hs_tbldefs.h",
+         "fsw/inc/hs_tblstruct.h     >> fsw/inc/hs_tblstruct.h",
+         "fsw/inc/hs_eds_msg_topicids.h >> fsw/inc/hs_eds_msg_topicids.h"
+      ]
+   },
+      
+   "cfs": {
+      "cfe-type": "CFE_PROXY"
+   },
+   
+   "requires": []
+   
+}}
+
