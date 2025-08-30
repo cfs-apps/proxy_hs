@@ -58,7 +58,7 @@
  *       cFE size limit for a single buffered table set by the
  *       #CFE_PLATFORM_TBL_MAX_SNGL_TABLE_SIZE parameter
  */
-#define HS_MAX_EXEC_CNT_SLOTS 32
+//bc::Moved to hs_config.xml: #define HS_MAX_EXEC_CNT_SLOTS 32
 
 /**
  * \brief Maximum message action types
@@ -81,7 +81,7 @@
  *       cFE size limit for a single buffered table set by the
  *       #CFE_PLATFORM_TBL_MAX_SNGL_TABLE_SIZE parameter
  */
-#define HS_MAX_MSG_ACT_TYPES 8
+//bc::Moved to hs_config.xml: #define HS_MAX_MSG_ACT_TYPES 8
 
 /**
  * \brief Maximum message action size (in bytes)
@@ -104,7 +104,7 @@
  *       cFE size limit for a single buffered table set by the
  *       #CFE_PLATFORM_TBL_MAX_SNGL_TABLE_SIZE parameter
  */
-#define HS_MAX_MSG_ACT_SIZE 16
+//bc::Moved to hs_config.xml: #define HS_MAX_MSG_ACT_SIZE 16
 
 /**
  * \brief Maximum number of monitored applications
@@ -128,7 +128,7 @@
  *       cFE size limit for a single buffered table set by the
  *       #CFE_PLATFORM_TBL_MAX_SNGL_TABLE_SIZE parameter
  */
-#define HS_MAX_MONITORED_APPS 32
+//bc::Moved to hs_config.xml: #define HS_MAX_MONITORED_APPS 32
 
 /**
  * \brief Maximum number of monitored events
@@ -152,7 +152,7 @@
  *       cFE size limit for a single buffered table set by the
  *       #CFE_PLATFORM_TBL_MAX_SNGL_TABLE_SIZE parameter
  */
-#define HS_MAX_MONITORED_EVENTS 16
+//bc::Moved to hs_config.xml: #define HS_MAX_MONITORED_EVENTS 16
 
 /**\}*/
 

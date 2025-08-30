@@ -24,8 +24,12 @@
 -->
 <DesignParameters>
 
-  <Package name="HS" shortDescription="Health & Safety App Configuration">
-
+  <Package name="HS" shortDescription="Health and Safety App Configuration">
+    <Define name="MAX_EXEC_CNT_SLOTS"   value="32" shortDescription="Moved from hs_interface_cfg.h" />
+    <Define name="MAX_MSG_ACT_TYPES"    value="8"  shortDescription="Moved from hs_interface_cfg.h" />
+    <Define name="MAX_MSG_ACT_SIZE"     value="16" shortDescription="Moved from hs_interface_cfg.h" />
+    <Define name="MAX_MONITORED_APPS"   value="32" shortDescription="Moved from hs_interface_cfg.h" />
+    <Define name="MAX_MONITORED_EVENTS" value="16" shortDescription="Moved from hs_interface_cfg.h" />
   </Package>
 
 </DesignParameters>
