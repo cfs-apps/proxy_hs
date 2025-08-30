@@ -26,7 +26,7 @@
          "hs.json                       >> hs.json",
          "CMakeLists.txt                >> CMakeLists.txt",
          "eds/HS.xml                    >> eds/HS.xml",
-         "eds/hs_config.xml             >> eds/hs_config.xml"
+         "eds/hs_config.xml             >> eds/hs_config.xml",
          "fsw/inc/hs_interface_cfg.h    >> config/default_hs_interface_cfg.h",
          "fsw/inc/hs_msgids.h           >> config/default_hs_msgids.h",
          "fsw/inc/hs_eds_msg_topicids.h >> config/default_hs_eds_msg_topicids.h"
