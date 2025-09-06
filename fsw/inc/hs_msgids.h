@@ -24,17 +24,20 @@
 #ifndef HS_MSGIDS_H
 #define HS_MSGIDS_H
 
+
+#include "cfe_msgids.h" //bc
+
 /**
  * \defgroup cfshscmdmid CFS Health and Safety Command Message IDs
  * \{
  */
 
-//#define HS_CMD_MID     0x18AE /**< \brief Msg ID for cmds to HS                */
-//#define HS_SEND_HK_MID 0x18AF /**< \brief Msg ID to request HS housekeeping    */
-//#define HS_WAKEUP_MID  0x18B0 /**< \brief Msg ID to wake up HS                 */
-#define HS_CMD_MID      CFE_PLATFORM_CMD_TOPICID_TO_MID(CFE_MISSION_HS_CMD_MID)
-#define HS_SEND_HK_MID  CFE_PLATFORM_CMD_TOPICID_TO_MID(CFE_MISSION_BC_SCH_4_SEC_TOPICID)
-#define HS_WAKEUP_MID   CFE_PLATFORM_CMD_TOPICID_TO_MID(CFE_MISSION_BC_SCH_8_SEC_TOPICID)
+//bc #define HS_CMD_MID     0x18AE /**< \brief Msg ID for cmds to HS                */
+//bc #define HS_SEND_HK_MID 0x18AF /**< \brief Msg ID to request HS housekeeping    */
+//bc #define HS_WAKEUP_MID  0x18B0 /**< \brief Msg ID to wake up HS                 */
+#define HS_CMD_MID      CFE_PLATFORM_CMD_TOPICID_TO_MID(CFE_MISSION_HS_CMD_TOPICID)       //bc 
+#define HS_SEND_HK_MID  CFE_PLATFORM_CMD_TOPICID_TO_MID(CFE_MISSION_BC_SCH_4_SEC_TOPICID) //bc 
+#define HS_WAKEUP_MID   CFE_PLATFORM_CMD_TOPICID_TO_MID(CFE_MISSION_BC_SCH_8_SEC_TOPICID) //bc 
 
 /**\}*/
 
@@ -43,8 +46,8 @@
  * \{
  */
 
-//#define HS_HK_TLM_MID 0x08AD /**< \brief HS Housekeeping Telemetry            */
-#define HS_HK_TLM_MID  CFE_PLATFORM_TLM_TOPICID_TO_MID(CFE_MISSION_HS_HK_TLM_MID)
+//bc #define HS_HK_TLM_MID 0x08AD /**< \brief HS Housekeeping Telemetry            */
+#define HS_HK_TLM_MID  CFE_PLATFORM_TLM_TOPICID_TO_MID(CFE_MISSION_HS_HK_TLM_TOPICID) //bc 
 
 /**\}*/
 

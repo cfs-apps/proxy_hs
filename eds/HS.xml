@@ -44,12 +44,19 @@
         </DimensionList>
       </ArrayDataType>
 
+      <!--bc
       <ArrayDataType name="AppMonEnables" dataTypeRef="BASE_TYPES/StatusBit">
         <DimensionList>
           <Dimension size="${HS/MAX_MONITORED_APPS}"/>
         </DimensionList>
       </ArrayDataType>
-
+      -->
+      <ArrayDataType name="AppMonEnables" dataTypeRef="BASE_TYPES/StatusBit">
+        <DimensionList>
+          <Dimension size="1" shortDescription="It's a bit array. uint32 AppMonEnables[((HS_MAX_MONITORED_APPS - 1) / HS_BITS_PER_APPMON_ENABLE) + 1];" />
+        </DimensionList>
+      </ArrayDataType>
+      
        <ContainerDataType name="HkTlm_Payload" shortDescription="HK housekeeping">
         <EntryList>
           <Entry name="CmdCount" type="BASE_TYPES/uint8" shortDescription="Count of valid commands received" />
@@ -156,7 +163,9 @@
       </ContainerDataType>
 
 
-
+     <!--bc
+     In the FSW the CFE_HDR/CommandHeader definition is a union with a 528 byte buffer so the compiled
+     table size is 4256 bytes or 532 bytes per entry. 532 = 528 + 4 bytes for the   Enable and Cooldown.    
      <ArrayDataType name="MsgArray" dataTypeRef="BASE_TYPES/uint8">
        <DimensionList>
          <Dimension size="${HS/MAX_MSG_ACT_SIZE}" />
@@ -168,7 +177,19 @@
         <Entry name="Message" type="CFE_HDR/CommandHeader" shortDescription="If entry contains message" />
       </EntryList>
     </ContainerDataType>
+    -->
+     <ArrayDataType name="MsgArray" dataTypeRef="BASE_TYPES/uint8">
+       <DimensionList>
+         <Dimension size="28" shortDescription="bc: Simple array to keep eds2cfetbl tool happy" />
+       </DimensionList>
+     </ArrayDataType>
 
+     <ContainerDataType name="MATMsgBuf" shortDescription="Message Action Table buffer">
+      <EntryList>
+        <Entry name="Message" type="MsgArray" shortDescription="Work around until get NASA EDS toolchain" />
+      </EntryList>
+    </ContainerDataType>
+    
      <ContainerDataType name="MATEntry" shortDescription="Message Actions Table (MAT) Entry">
       <EntryList>
         <Entry name="EnableState" type="BASE_TYPES/uint16" shortDescription="If entry contains message" />

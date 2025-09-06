@@ -19,37 +19,20 @@
 
 /**
  * @file
- *   CFS Health and Safety (HS) Application Message IDs
+ *
+ * CFS Health and Safety (HS) Application Mission Configuration Header File
+ *
+ * This is a compatibility header for the "mission_cfg.h" file that has
+ * traditionally provided public config definitions for each CFS app.
+ *
+ * @note This file may be overridden/superceded by mission-provided defintions
+ * either by overriding this header or by generating definitions from a command/data
+ * dictionary tool.
  */
-#ifndef HS_MSGIDS_H
-#define HS_MSGIDS_H
+#ifndef HS_MISSION_CFG_H
+#define HS_MISSION_CFG_H
 
-#include "cfe_msgids.h"
-
-/**
- * \defgroup cfshscmdmid CFS Health and Safety Command Message IDs
- * \{
- */
-
-/** \brief Msg ID for cmds to HS */
-#define HS_CMD_MID CFE_PLATFORM_CMD_TOPICID_TO_MID(CFE_MISSION_HS_CMD_TOPICID)
-
-/** \brief Msg ID to request HS housekeeping */
-#define HS_SEND_HK_MID CFE_PLATFORM_CMD_TOPICID_TO_MID(CFE_MISSION_HS_SEND_HK_TOPICID)
-
-/** \brief Msg ID to wake up HS */
-#define HS_WAKEUP_MID CFE_PLATFORM_CMD_TOPICID_TO_MID(CFE_MISSION_HS_WAKEUP_TOPICID)
-
-/**\}*/
-
-/**
- * \defgroup cfshstlmmid CFS Health and Safety Telemetry Message IDs
- * \{
- */
-
-/** \brief HS Housekeeping Telemetry */
-#define HS_HK_TLM_MID CFE_PLATFORM_TLM_TOPICID_TO_MID(CFE_MISSION_HS_HK_TLM_TOPICID)
-
-/**\}*/
+#include "hs_eds_designparameters.h"  //bc
+#include "hs_interface_cfg.h"
 
 #endif
